@@ -54,9 +54,9 @@ namespace Quanlysanbong
             }
         }
 
-        private void chkCheckhienthi_CheckedChanged(object sender, EventArgs e)
+        private void chkHienthi_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkCheckhienthi.Checked)
+            if (chkHienthi.Checked)
             {
                 txtpass.PasswordChar = (char)0;
             }
@@ -65,5 +65,9 @@ namespace Quanlysanbong
                 txtpass.PasswordChar = '*';
             }
         }
+
+       
+
+
     }
 }

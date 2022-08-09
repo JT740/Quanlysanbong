@@ -28,5 +28,19 @@ namespace Quanlysanbong
             this.Close();
             
         }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form f = new FormDoiPass();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form f = new Form1();
+            f.Show();
+            this.Close();
+        }
     }
 }
