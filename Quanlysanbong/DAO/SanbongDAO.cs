@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Quanlysanbong.DTO;
+using System.Data.SqlClient;
 
 
 namespace Quanlysanbong.DAO
@@ -17,8 +18,8 @@ namespace Quanlysanbong.DAO
             get { if (instance == null) instance = new SanbongDAO(); return SanbongDAO.instance; }
             private set { SanbongDAO.instance = value; }
         }
-        public int Weigh = 80;
-        public int Heigh = 80;
+        public int Weigh = 110;
+        public int Heigh = 110;
 
         private SanbongDAO() { }
         public List<Sanbong> LoadDSSan()
