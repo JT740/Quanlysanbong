@@ -59,7 +59,25 @@ namespace Quanlysanbong
             }
         }
 
-        
+        private void btnsua_Click(object sender, EventArgs e)
+        {
+            string tensan = txtten.Text;
+            string trangthai = comboBox1.Text;
+            int maloai = Convert.ToInt32(comboBox2.Text);
+            int masan = Convert.ToInt32(txtma.Text);
+
+
+            if (SanbongDAO.Instance.EditSan(masan, tensan, trangthai, maloai))
+            {
+                MessageBox.Show("Sửa sân thành công");
+                LoadDSSan();
+                Refesh();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi ");
+            }
+        }
 
         private void dgvsan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -107,7 +125,7 @@ namespace Quanlysanbong
             string tensan = txtten.Text;
             int masan = Convert.ToInt32(txtma.Text);
             int maloai = Convert.ToInt32(comboBox2.Text);
-
+        
 
 
             if (SanbongDAO.Instance.EditSan(tensan, trangthai, maloai, masan))

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Quanlysanbong.DTO;
+using System.Data.SqlClient;
 
 
 namespace Quanlysanbong.DAO
@@ -17,6 +18,8 @@ namespace Quanlysanbong.DAO
             get { if (instance == null) instance = new SanbongDAO(); return SanbongDAO.instance; }
             private set { SanbongDAO.instance = value; }
         }
+        public int Weigh = 110;
+        public int Heigh = 110;
         public int Weigh = 80;
         public int Heigh = 80;
 
@@ -57,13 +60,15 @@ namespace Quanlysanbong.DAO
             return kq > 0;
         }
 
+        public bool EditSan(int masan, string tensan, string trangthai, int maloai)
         public bool EditSan( string tensan, string trangthai, int maloai, int masan)
         {
+            string query = string.Format("UPDATE San SET tensan = N'0', trangthai = {1}, maloai = {2}" + "where masan = {3}", tensan, trangthai, maloai, masan);
             string query = string.Format("UPDATE San SET tensan =  N'{0}', trangthai = 0 , maloai = {2}  where masan = '{3}'", tensan,trangthai,maloai,masan); 
             
-            int kq = DataProvider.Instance.Executenonquery(query); 
+            int kq = DataProvider.Instance.Executenonquery(query);
             
-            return kq > 0; 
+            return kq > 0;
             
         }
 
