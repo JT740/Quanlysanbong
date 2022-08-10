@@ -10,8 +10,8 @@ namespace Quanlysanbong.DAO
 {
     public class DataProvider
     {
-        //private string connectionSTR = "Data Source=DESKTOP-VGDP77D\\SQLEXPRESS;Initial Catalog=QLSB;Integrated Security=True";
-        private string connectionSTR = "Data Source=DESKTOP-65U6804;Initial Catalog=QLSB;Integrated Security=True";
+        private string connectionSTR = "Data Source=.\\SQLEXPRESS;Initial Catalog=QLSB;Integrated Security=True";
+        //private string connectionSTR = "Data Source=DESKTOP-65U6804;Initial Catalog=QLSB;Integrated Security=True";
         private static DataProvider instance; 
 
         public static DataProvider Instance

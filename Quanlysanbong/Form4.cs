@@ -114,6 +114,30 @@ namespace Quanlysanbong
 
         }
 
+        private void btnsua_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsua_Click_2(object sender, EventArgs e)
+        {
+            string trangthai = comboBox1.Text;
+            string tensan = txtten.Text;
+            int masan = Convert.ToInt32(txtma.Text);
+            int maloai = Convert.ToInt32(comboBox2.Text);
         
+
+
+            if (SanbongDAO.Instance.EditSan(tensan, trangthai, maloai, masan))
+            {
+                MessageBox.Show("Sửa sân thành công");
+                LoadDSSan();
+                Refesh();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi ");
+            }
+        }
     }
 }

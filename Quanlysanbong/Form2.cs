@@ -42,5 +42,11 @@ namespace Quanlysanbong
             f.Show();
             this.Close();
         }
+
+        private void đặtSânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3();
+            f.ShowDialog();
+        }
     }
 }

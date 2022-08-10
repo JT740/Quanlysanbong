@@ -40,6 +40,7 @@
             this.txtma = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnsua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,11 +140,13 @@
             this.txtma.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtma.Location = new System.Drawing.Point(105, 32);
             this.txtma.Name = "txtma";
+            this.txtma.ReadOnly = true;
             this.txtma.Size = new System.Drawing.Size(258, 29);
             this.txtma.TabIndex = 13;
             // 
             // comboBox1
             // 
+            this.comboBox1.Enabled = false;
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -166,11 +169,22 @@
             this.comboBox2.Size = new System.Drawing.Size(252, 29);
             this.comboBox2.TabIndex = 15;
             // 
+            // btnsua
+            // 
+            this.btnsua.Location = new System.Drawing.Point(158, 400);
+            this.btnsua.Name = "btnsua";
+            this.btnsua.Size = new System.Drawing.Size(75, 40);
+            this.btnsua.TabIndex = 16;
+            this.btnsua.Text = "Sửa";
+            this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click_2);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 692);
+            this.Controls.Add(this.btnsua);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtma);
@@ -206,5 +220,6 @@
         private TextBox txtma;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
+        private Button btnsua;
     }
 }
