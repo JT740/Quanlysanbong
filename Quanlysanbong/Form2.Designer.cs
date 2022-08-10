@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nghiệpVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đặtSânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +58,8 @@
             // hệThốngToolStripMenuItem
             // 
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đăngXuấtToolStripMenuItem});
+            this.đăngXuấtToolStripMenuItem,
+            this.đổiMậtKhẩuToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
@@ -65,8 +67,16 @@
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            // 
+            // đổiMậtKhẩuToolStripMenuItem
+            // 
+            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
+            this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // nghiệpVụToolStripMenuItem
             // 
@@ -82,28 +92,28 @@
             // đặtSânToolStripMenuItem
             // 
             this.đặtSânToolStripMenuItem.Name = "đặtSânToolStripMenuItem";
-            this.đặtSânToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đặtSânToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.đặtSânToolStripMenuItem.Text = "Đặt sân";
             this.đặtSânToolStripMenuItem.Click += new System.EventHandler(this.đặtSânToolStripMenuItem_Click);
             // 
             // thanhToánToolStripMenuItem
             // 
             this.thanhToánToolStripMenuItem.Name = "thanhToánToolStripMenuItem";
-            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.thanhToánToolStripMenuItem.Text = "Thanh toán";
             this.thanhToánToolStripMenuItem.Click += new System.EventHandler(this.thanhToánToolStripMenuItem_Click);
             // 
             // quảnLýSânToolStripMenuItem
             // 
             this.quảnLýSânToolStripMenuItem.Name = "quảnLýSânToolStripMenuItem";
-            this.quảnLýSânToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýSânToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.quảnLýSânToolStripMenuItem.Text = "Quản lý sân";
             this.quảnLýSânToolStripMenuItem.Click += new System.EventHandler(this.quảnLýSânToolStripMenuItem_Click);
             // 
             // quảnLýHóaĐơnToolStripMenuItem
             // 
             this.quảnLýHóaĐơnToolStripMenuItem.Name = "quảnLýHóaĐơnToolStripMenuItem";
-            this.quảnLýHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.quảnLýHóaĐơnToolStripMenuItem.Text = "Quản lý hóa đơn";
             // 
             // trợGiúpToolStripMenuItem
@@ -140,5 +150,6 @@
         private ToolStripMenuItem quảnLýSânToolStripMenuItem;
         private ToolStripMenuItem quảnLýHóaĐơnToolStripMenuItem;
         private ToolStripMenuItem trợGiúpToolStripMenuItem;
+        private ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
     }
 }
