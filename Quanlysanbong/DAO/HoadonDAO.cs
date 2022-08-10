@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Quanlysanbong.DTO;
 
 namespace Quanlysanbong.DAO
 {
@@ -17,5 +18,12 @@ namespace Quanlysanbong.DAO
         }
         private HoadonDAO() { }
 
+        public void Insert_hoadon(string datetime, int mapds, float giobatdat, float gioketthuc, int makh, float tongtien)
+        {
+            Hoadon hd = new Hoadon();
+           
+            string query = "insert into HoaDon values(" + mapds + ",'" + datetime + "'," + giobatdat + "," + gioketthuc + "," + makh + "," + tongtien + ",0)";
+            int data = DataProvider.Instance.Executenonquery(query);
+        }
     }
 }

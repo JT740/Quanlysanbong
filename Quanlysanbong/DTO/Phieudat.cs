@@ -41,16 +41,25 @@ namespace Quanlysanbong.DTO
         }
         public Phieudat(System.Data.DataRow row)
         {
-            this.maphieudat = (int)row["maphieudat"];
+            this.maphieudat = (int)row["mapds"];
             this.makhachhang = (int)row["makhachhang"];
             this.masan = (int)row["masan"];
-            this.tiencoc = (float)row["tiencoc"];
+            this.tiencoc = Int32.Parse(row["tiencoc"].ToString());
             this.Ngaydat = row["ngaydat"].ToString();
-            this.giodat = (float)row["giodat"];
-            this.giotra = (float)row["giotra"];
+            this.giodat = float.Parse(row["giodat"].ToString());
+            this.giotra = float.Parse(row["giotra"].ToString());
         }
-        public Phieudat()
+        public Phieudat(Phieudat obj)
         {
+            this.maphieudat = obj.maphieudat;
+            this.makhachhang = obj.makhachhang;
+            this.masan = obj.masan;
+            this.tiencoc = obj.tiencoc;
+            this.giodat = obj.giodat;
+            this.giotra = obj.giotra;
+            this.ngaydat = obj.ngaydat;
         }
+        public Phieudat() { }
     }
+
 }

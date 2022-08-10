@@ -114,6 +114,22 @@ namespace Quanlysanbong
 
                 bds.pdat.Makhachhang = bds.kh.Makhachhang;
                 bds.pdat.Masan = Int32.Parse(sb.Masan.ToString());
+
+                //load loai san
+                Loaisan ls = new Loaisan(LoaisanDAO.Instance.Loadloaisan(sb.Maloai.ToString()));
+
+
+                string query2 = "insert into Phieudatsan values(" + bds.kh.Makhachhang + "," + bds.pdat.Masan + "," + bds.pdat.Tiencoc + ",'" + bds.pdat.Ngaydat + "',4," + bds.pdat.Giotra + ",0)";
+                DataProvider.Instance.Executenoquery(query2);
+                flpTaiSandat.Controls.Clear();
+
+                bds.pdat = new Phieudat(PhieudatsanDAO.Instance.Loadlastestpds());
+
+                HoadonDAO.Instance.Insert_hoadon(bds.pdat.Ngaydat, Convert.ToInt32(bds.pdat.Maphieudat), bds.pdat.Giodat, bds.pdat.Giotra, bds.kh.Makhachhang,
+                    ls.Giatien * Int32.Parse(txtSogiothue.Text) - bds.pdat.Tiencoc);
+                LoadflpTaisan();
+
+
             }
             else
             {
@@ -122,11 +138,7 @@ namespace Quanlysanbong
 
             //them khach hang
 
-            string query2 = "insert into Phieudatsan values(" + bds.kh.Makhachhang + "," + bds.pdat.Masan + "," + bds.pdat.Tiencoc + ",'" + bds.pdat.Ngaydat + "',4," + bds.pdat.Giotra + ",0)";
-            int data2 = DataProvider.Instance.Executenoquery(query2);
-            MessageBox.Show("da lm");
-            flpTaiSandat.Controls.Clear();
-            LoadflpTaisan();
+            
 
             //them phieu dat
 
