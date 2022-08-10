@@ -34,6 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtten = new System.Windows.Forms.TextBox();
             this.btnthem = new System.Windows.Forms.Button();
+            this.btnsua = new System.Windows.Forms.Button();
             this.btnxoa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtma = new System.Windows.Forms.TextBox();
@@ -103,6 +104,16 @@
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
+            // 
+            // btnsua
+            // 
+            this.btnsua.Location = new System.Drawing.Point(157, 400);
+            this.btnsua.Name = "btnsua";
+            this.btnsua.Size = new System.Drawing.Size(75, 40);
+            this.btnsua.TabIndex = 10;
+            this.btnsua.Text = "Sửa";
+            this.btnsua.UseVisualStyleBackColor = true;
+            //this.btnsua.Click += new System.EventHandler(this.btnsua_Click_1);
             // 
             // btnxoa
             // 
@@ -179,6 +190,7 @@
             this.Controls.Add(this.txtma);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnxoa);
+            this.Controls.Add(this.btnsua);
             this.Controls.Add(this.btnthem);
             this.Controls.Add(this.txtten);
             this.Controls.Add(this.label4);
@@ -202,11 +214,12 @@
         private Label label4;
         private TextBox txtten;
         private Button btnthem;
+        private Button btnsua;
         private Button btnxoa;
         private Label label1;
         private TextBox txtma;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
-        private Button btnsua;
+
     }
 }
