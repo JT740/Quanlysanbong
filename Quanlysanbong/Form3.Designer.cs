@@ -122,7 +122,14 @@
             // 
             // label7
             // 
-          
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(438, 90);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 21);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Mã khách hàng";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
