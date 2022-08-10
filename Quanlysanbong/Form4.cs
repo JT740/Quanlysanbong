@@ -67,7 +67,7 @@ namespace Quanlysanbong
             int masan = Convert.ToInt32(txtma.Text);
 
 
-            if (SanbongDAO.Instance.EditSan(masan, tensan, trangthai, maloai))
+            if (SanbongDAO.Instance.EditSan( tensan, trangthai, maloai,masan))
             {
                 MessageBox.Show("Sửa sân thành công");
                 LoadDSSan();

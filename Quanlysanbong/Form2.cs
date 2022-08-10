@@ -48,5 +48,11 @@ namespace Quanlysanbong
             Form3 f = new Form3();
             f.ShowDialog();
         }
+
+        private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 f = new Form5();
+            f.ShowDialog();
+        }
     }
 }

@@ -220,6 +220,6 @@
         private TextBox txtma;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
-        private Button btnsua;
+
     }
 }

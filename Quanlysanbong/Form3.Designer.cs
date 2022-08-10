@@ -54,7 +54,7 @@
             this.txtPhutdat = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+      
             this.txtTenkhachhang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgThongtinphieudat)).BeginInit();
             this.SuspendLayout();
@@ -407,7 +407,6 @@
         private TextBox txtPhutdat;
         private Label label11;
         private Label label12;
-        private Label label7;
         private TextBox txtTenkhachhang;
     }
 }
