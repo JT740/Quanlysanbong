@@ -48,13 +48,12 @@
             this.dtgThongtinphieudat = new System.Windows.Forms.DataGridView();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuyluu = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.txtSogiothue = new System.Windows.Forms.TextBox();
             this.txtGiodat = new System.Windows.Forms.TextBox();
             this.txtPhutdat = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-      
             this.txtTenkhachhang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgThongtinphieudat)).BeginInit();
             this.SuspendLayout();
@@ -114,7 +113,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(501, 292);
+            this.label6.Location = new System.Drawing.Point(488, 291);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 28);
             this.label6.TabIndex = 5;
@@ -124,11 +123,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(438, 90);
+            this.label7.Location = new System.Drawing.Point(488, 204);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 21);
+            this.label7.Size = new System.Drawing.Size(60, 28);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Mã khách hàng";
+            this.label7.Text = "CCCD";
             // 
             // label8
             // 
@@ -188,7 +187,7 @@
             this.txtTiencoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTiencoc.Name = "txtTiencoc";
             this.txtTiencoc.Size = new System.Drawing.Size(271, 34);
-            this.txtTiencoc.TabIndex = 13;
+            this.txtTiencoc.TabIndex = 7;
             // 
             // txtCccd
             // 
@@ -198,11 +197,10 @@
             this.txtCccd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCccd.Name = "txtCccd";
             this.txtCccd.Size = new System.Drawing.Size(316, 34);
-            this.txtCccd.TabIndex = 15;
+            this.txtCccd.TabIndex = 3;
             // 
             // dtpNgaydat
             // 
-            this.dtpNgaydat.Enabled = false;
             this.dtpNgaydat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpNgaydat.Location = new System.Drawing.Point(649, 295);
             this.dtpNgaydat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -217,7 +215,7 @@
             this.txtSdt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(229, 27);
-            this.txtSdt.TabIndex = 17;
+            this.txtSdt.TabIndex = 2;
             // 
             // flpTaiSandat
             // 
@@ -237,7 +235,7 @@
             this.dtgThongtinphieudat.Name = "dtgThongtinphieudat";
             this.dtgThongtinphieudat.RowHeadersWidth = 51;
             this.dtgThongtinphieudat.RowTemplate.Height = 25;
-            this.dtgThongtinphieudat.Size = new System.Drawing.Size(650, 500);
+            this.dtgThongtinphieudat.Size = new System.Drawing.Size(664, 500);
             this.dtgThongtinphieudat.TabIndex = 19;
             // 
             // btnLuu
@@ -260,16 +258,18 @@
             this.btnHuyluu.TabIndex = 21;
             this.btnHuyluu.Text = "Hủy";
             this.btnHuyluu.UseVisualStyleBackColor = true;
+            this.btnHuyluu.Click += new System.EventHandler(this.btnHuyluu_Click);
             // 
-            // button1
+            // btnThoat
             // 
-            this.button1.Location = new System.Drawing.Point(251, 361);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 33);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThoat.Location = new System.Drawing.Point(251, 361);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(90, 33);
+            this.btnThoat.TabIndex = 22;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtSogiothue
             // 
@@ -278,7 +278,7 @@
             this.txtSogiothue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSogiothue.Name = "txtSogiothue";
             this.txtSogiothue.Size = new System.Drawing.Size(229, 27);
-            this.txtSogiothue.TabIndex = 23;
+            this.txtSogiothue.TabIndex = 6;
             // 
             // txtGiodat
             // 
@@ -287,7 +287,7 @@
             this.txtGiodat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGiodat.Name = "txtGiodat";
             this.txtGiodat.Size = new System.Drawing.Size(74, 27);
-            this.txtGiodat.TabIndex = 24;
+            this.txtGiodat.TabIndex = 4;
             // 
             // txtPhutdat
             // 
@@ -296,7 +296,7 @@
             this.txtPhutdat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhutdat.Name = "txtPhutdat";
             this.txtPhutdat.Size = new System.Drawing.Size(78, 27);
-            this.txtPhutdat.TabIndex = 25;
+            this.txtPhutdat.TabIndex = 5;
             // 
             // label11
             // 
@@ -318,16 +318,6 @@
             this.label12.TabIndex = 27;
             this.label12.Text = "m";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(488, 204);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 28);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "CCCD";
-            // 
             // txtTenkhachhang
             // 
             this.txtTenkhachhang.Enabled = false;
@@ -336,20 +326,21 @@
             this.txtTenkhachhang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTenkhachhang.Name = "txtTenkhachhang";
             this.txtTenkhachhang.Size = new System.Drawing.Size(316, 34);
-            this.txtTenkhachhang.TabIndex = 14;
+            this.txtTenkhachhang.TabIndex = 1;
             // 
             // Form3
             // 
+            this.AcceptButton = this.btnLuu;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1355, 921);
+            this.CancelButton = this.btnThoat;
+            this.ClientSize = new System.Drawing.Size(1365, 918);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPhutdat);
             this.Controls.Add(this.txtGiodat);
             this.Controls.Add(this.txtSogiothue);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnHuyluu);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.dtgThongtinphieudat);
@@ -402,7 +393,7 @@
         private DataGridView dtgThongtinphieudat;
         private Button btnLuu;
         private Button btnHuyluu;
-        private Button button1;
+        private Button btnThoat;
         private TextBox txtSogiothue;
         private TextBox txtGiodat;
         private TextBox txtPhutdat;

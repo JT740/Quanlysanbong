@@ -39,6 +39,17 @@ namespace Quanlysanbong
 
            
         }
+        bool checktensan(string tensan)
+        {
+            string query = "select *from San where tensan = N'" + tensan + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            if (data.Rows.Count>0)
+            {
+                return true;
+            }
+            return false;
+
+        }
 
         private void btnthem_Click(object sender, EventArgs e)
         {
@@ -47,16 +58,23 @@ namespace Quanlysanbong
             int maloai = Convert.ToInt32(comboBox2.Text);
 
 
-            if (SanbongDAO.Instance.InsertSan( tensan, trangthai, maloai))
+            //kiem tra ten san
+
+            if (!checktensan(txtten.Text))
             {
-                MessageBox.Show("Thêm sân thành công");
-                LoadDSSan();
-                Refesh();
+                if (SanbongDAO.Instance.InsertSan(tensan, trangthai, maloai))
+                {
+                    MessageBox.Show("Thêm sân thành công");
+                    LoadDSSan();
+                    Refesh();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi ");
+                }
             }
             else
-            {
-                MessageBox.Show("Lỗi ");
-            }
+                MessageBox.Show("trung ten san");
         }
 
         private void btnsua_Click(object sender, EventArgs e)
@@ -67,15 +85,22 @@ namespace Quanlysanbong
             int masan = Convert.ToInt32(txtma.Text);
 
 
-            if (SanbongDAO.Instance.EditSan( tensan, trangthai, maloai,masan))
+            if (!checktensan(txtten.Text))
             {
-                MessageBox.Show("Sửa sân thành công");
-                LoadDSSan();
-                Refesh();
+                if (SanbongDAO.Instance.EditSan(tensan, trangthai, maloai, masan))
+                {
+                    MessageBox.Show("Sửa sân thành công");
+                    LoadDSSan();
+                    Refesh();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi ");
+                }
             }
             else
             {
-                MessageBox.Show("Lỗi ");
+                MessageBox.Show("Lỗi ten san ");
             }
         }
 

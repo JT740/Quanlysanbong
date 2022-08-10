@@ -28,15 +28,31 @@ namespace Quanlysanbong
 
         private void dgvhoadon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
             int i;
             i = dgvhoadon.CurrentCell.RowIndex;
             txttenkh.Text = dgvhoadon.Rows[i].Cells[0].Value.ToString();
             txttensan.Text = dgvhoadon.Rows[i].Cells[1].Value.ToString();
-            txtbatdau.Text = dgvhoadon.Rows[i].Cells[2].Value.ToString();
-            txtketthuc.Text = dgvhoadon.Rows[i].Cells[3].Value.ToString();
-            txttien.Text = dgvhoadon.Rows[i].Cells[6].Value.ToString();
+            txtbatdau.Text = dgvhoadon.Rows[i].Cells[3].Value.ToString();
+            txtketthuc.Text = dgvhoadon.Rows[i].Cells[4].Value.ToString();
+            txttien.Text = dgvhoadon.Rows[i].Cells[7].Value.ToString();
+            txtNgaydat.Text = dgvhoadon.Rows[i].Cells[2].Value.ToString();
 
+        }
+
+        private void btnthanhtoan_Click(object sender, EventArgs e)
+        {
+            string queryUdhd = "exec USP_thanhtoan N'" + txttensan.Text + "' , '" + txtNgaydat.Text + "',"+txtbatdau.Text+","+txtketthuc.Text+"";
+
+            int data = DataProvider.Instance.Executenonquery(queryUdhd);
+
+            txttenkh.Clear();
+            txttensan.Clear();
+            txtbatdau.Clear();
+            txtketthuc.Clear();
+            txttien.Clear();
+            MessageBox.Show("thanh toan thanh cong");
+            loadHoadon();
         }
     }
 }

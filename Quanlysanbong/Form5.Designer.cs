@@ -40,10 +40,10 @@
             this.txtketthuc = new System.Windows.Forms.TextBox();
             this.txttenkh = new System.Windows.Forms.TextBox();
             this.txttien = new System.Windows.Forms.TextBox();
-            this.dtpngaydat = new System.Windows.Forms.DateTimePicker();
             this.dgvhoadon = new System.Windows.Forms.DataGridView();
             this.btnthanhtoan = new System.Windows.Forms.Button();
             this.btnthoat = new System.Windows.Forms.Button();
+            this.txtNgaydat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvhoadon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,14 +164,6 @@
             this.txttien.Size = new System.Drawing.Size(257, 27);
             this.txttien.TabIndex = 12;
             // 
-            // dtpngaydat
-            // 
-            this.dtpngaydat.Location = new System.Drawing.Point(216, 212);
-            this.dtpngaydat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dtpngaydat.Name = "dtpngaydat";
-            this.dtpngaydat.Size = new System.Drawing.Size(257, 27);
-            this.dtpngaydat.TabIndex = 13;
-            // 
             // dgvhoadon
             // 
             this.dgvhoadon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -194,6 +186,7 @@
             this.btnthanhtoan.TabIndex = 15;
             this.btnthanhtoan.Text = "Thanh toán";
             this.btnthanhtoan.UseVisualStyleBackColor = true;
+            this.btnthanhtoan.Click += new System.EventHandler(this.btnthanhtoan_Click);
             // 
             // btnthoat
             // 
@@ -205,15 +198,24 @@
             this.btnthoat.Text = "Thoát";
             this.btnthoat.UseVisualStyleBackColor = true;
             // 
+            // txtNgaydat
+            // 
+            this.txtNgaydat.Enabled = false;
+            this.txtNgaydat.Location = new System.Drawing.Point(216, 216);
+            this.txtNgaydat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNgaydat.Name = "txtNgaydat";
+            this.txtNgaydat.Size = new System.Drawing.Size(257, 27);
+            this.txtNgaydat.TabIndex = 17;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1516, 919);
+            this.Controls.Add(this.txtNgaydat);
             this.Controls.Add(this.btnthoat);
             this.Controls.Add(this.btnthanhtoan);
             this.Controls.Add(this.dgvhoadon);
-            this.Controls.Add(this.dtpngaydat);
             this.Controls.Add(this.txttien);
             this.Controls.Add(this.txttenkh);
             this.Controls.Add(this.txtketthuc);
@@ -249,9 +251,9 @@
         private TextBox txtketthuc;
         private TextBox txttenkh;
         private TextBox txttien;
-        private DateTimePicker dtpngaydat;
         private DataGridView dgvhoadon;
         private Button btnthanhtoan;
         private Button btnthoat;
+        private TextBox txtNgaydat;
     }
 }

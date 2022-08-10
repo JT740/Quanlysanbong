@@ -36,13 +36,14 @@
             this.btnexit = new System.Windows.Forms.Button();
             this.chkCheckhienthi = new System.Windows.Forms.CheckBox();
             this.chkHienthi = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(57, 56);
+            this.label1.Location = new System.Drawing.Point(68, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 21);
             this.label1.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(76, 111);
+            this.label2.Location = new System.Drawing.Point(87, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 21);
             this.label2.TabIndex = 1;
@@ -61,25 +62,26 @@
             // txtuser
             // 
             this.txtuser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtuser.Location = new System.Drawing.Point(199, 53);
+            this.txtuser.Location = new System.Drawing.Point(210, 124);
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(545, 29);
+            this.txtuser.Size = new System.Drawing.Size(449, 29);
             this.txtuser.TabIndex = 2;
             // 
             // txtpass
             // 
             this.txtpass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtpass.Location = new System.Drawing.Point(199, 111);
+            this.txtpass.Location = new System.Drawing.Point(210, 182);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
-            this.txtpass.Size = new System.Drawing.Size(545, 29);
+            this.txtpass.Size = new System.Drawing.Size(449, 29);
             this.txtpass.TabIndex = 4;
             // 
             // btnlogin
             // 
-            this.btnlogin.Location = new System.Drawing.Point(301, 195);
+            this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnlogin.Location = new System.Drawing.Point(251, 275);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(75, 23);
+            this.btnlogin.Size = new System.Drawing.Size(106, 71);
             this.btnlogin.TabIndex = 5;
             this.btnlogin.Text = "Đăng nhập";
             this.btnlogin.UseVisualStyleBackColor = true;
@@ -87,9 +89,10 @@
             // 
             // btnexit
             // 
-            this.btnexit.Location = new System.Drawing.Point(518, 195);
+            this.btnexit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnexit.Location = new System.Drawing.Point(468, 275);
             this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(75, 23);
+            this.btnexit.Size = new System.Drawing.Size(106, 71);
             this.btnexit.TabIndex = 6;
             this.btnexit.Text = "Thoát";
             this.btnexit.UseVisualStyleBackColor = true;
@@ -109,20 +112,34 @@
             // chkHienthi
             // 
             this.chkHienthi.AutoSize = true;
-            this.chkHienthi.Location = new System.Drawing.Point(206, 159);
+            this.chkHienthi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.chkHienthi.Location = new System.Drawing.Point(217, 230);
             this.chkHienthi.Name = "chkHienthi";
-            this.chkHienthi.Size = new System.Drawing.Size(121, 19);
+            this.chkHienthi.Size = new System.Drawing.Size(152, 25);
             this.chkHienthi.TabIndex = 7;
             this.chkHienthi.Text = "Hiển thi mật khẩu";
             this.chkHienthi.UseVisualStyleBackColor = true;
             this.chkHienthi.CheckedChanged += new System.EventHandler(this.chkHienthi_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(313, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(172, 40);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Đăng Nhập";
             // 
             // Form1
             // 
             this.AcceptButton = this.btnlogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 541);
+            this.CancelButton = this.btnexit;
+            this.ClientSize = new System.Drawing.Size(771, 405);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.chkHienthi);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btnlogin);
@@ -151,5 +168,6 @@
         private Button btnexit;
         private CheckBox chkCheckhienthi;
         private CheckBox chkHienthi;
+        private Label label3;
     }
 }

@@ -16,8 +16,10 @@ namespace Quanlysanbong
             if (Login(tenTaiKhoan, matKhau))
             {
                 Form2 f = new Form2();
-                f.Show();
-                this.Hide();
+               
+                f.ShowDialog();
+                this.Close();
+               
             }
             else
             {

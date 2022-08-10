@@ -144,5 +144,20 @@ namespace Quanlysanbong
 
             // insertPDS();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnHuyluu_Click(object sender, EventArgs e)
+        {
+            txtCccd.Clear();
+            txtGiodat.Clear();
+            txtTenkhachhang.Clear();
+            txtSdt.Clear();
+            txtTiencoc.Clear();
+            txtSogiothue.Clear();
+        }
     }
 }
